@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>AFrame web vr 超简单框架</title>
+    <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
+</head>
+<body>
+    <!-- AFrame组件化的web vr 框架 -->
+    <a-scene>
+        <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere>
+        <a-box position="-1 .5 -3" rotation="0 45 0" depth="1" width="1" height="1" color="#4CC3D9"></a-box>
+        <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC650"></a-cylinder>
+        <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
+        <a-sky color="#ECECEC"></a-sky>
+    </a-scene>
+    <script>
+        var sceneEl = document.querySelector('a-scene');
+        var boxEl = document.querySelector('a-box');
+        boxEl.addEventListener('click', functin() {
+            boxEl.setAttribute('color', 'red')
+        })
+    </script>    
+</body>
+</html>
